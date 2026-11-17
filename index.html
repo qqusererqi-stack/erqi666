@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公益云免费领取教程 | 完整步骤说明</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f7fa; color: #333; line-height: 1.8; }
+.container { max-width: 800px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); padding: 40px; }
+h1 { font-size: 26px; color: #1a1a2e; margin-bottom: 10px; }
+.subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
+h2 { font-size: 20px; color: #16213e; margin: 30px 0 12px; border-left: 4px solid #0066cc; padding-left: 12px; }
+p, li { font-size: 15px; margin-bottom: 10px; }
+a.link { color: #0066cc; font-weight: bold; word-break: break-all; }
+a.link:hover { text-decoration: underline; }
+ul, ol { padding-left: 20px; margin-bottom: 15px; }
+.note { background: #fff8e1; border-left: 4px solid #ff9800; padding: 12px 16px; border-radius: 6px; margin: 20px 0; font-size: 14px; }
+.warn { background: #fde8e8; border-left: 4px solid #e74c3c; padding: 12px 16px; border-radius: 6px; margin: 20px 0; font-size: 14px; }
+.footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; color: #aaa; font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>公益云免费领取完整指南</h1>
+<p class="subtitle">本文档提供从注册到成功领取公益云服务的全流程说明，含注意事项与常见问题解答。</p>
+
+<h2>一、什么是公益云服务</h2>
+<p>公益云服务是由慈云数据（CiyunData）面向开发者、学生及非营利项目提供的免费云计算资源计划。该计划旨在降低个人和小团队上云门槛，让更多人能够以零成本体验云服务器的搭建与管理。公益云并非试用版或阉割版，它提供完整的云服务器功能，包括独立IP、root权限、可自由选择操作系统，并支持一键部署常见环境如宝塔面板、LNMP、Docker等。对于学习Linux运维、搭建个人网站、部署API服务或进行开发测试的用户来说，公益云是一个性价比极高的选择。</p>
+
+<h2>二、注册账号</h2>
+<p>首先访问以下注册链接完成账号创建：</p>
+<p><a class="link" href="https://www.ciyundata.com/recommend/Le4TRyjWKDtq" target="_blank">https://www.ciyundata.com/recommend/Le4TRyjWKDtq</a></p>
+<p>点击链接后进入慈云数据官网首页，右上角点击"注册"按钮。注册支持手机号方式，填写基本信息后即可完成。注册成功后系统会自动登录，首页将显示账户余额（新用户注册后可见相关金额展示，如¥10.00，可用于抵扣部分付费服务）。</p>
+
+<h2>三、进入公益云服务页面</h2>
+<p>登录后，在控制台左侧菜单栏中找到并点击<strong>"公益云服务"</strong>选项。该入口位于左侧导航菜单的中部位置，图标通常为云朵形状。点击后进入公益云专属页面，这里会列出当前可领取的所有公益云套餐及其规格详情。</p>
+
+<h2>四、选择套餐并领取</h2>
+<p>在公益云页面中，选择<strong>"亚太基础版"</strong>套餐。该套餐提供以下核心资源：</p>
+<ul>
+<li>30天免费使用时长（到期前可续期或升级）</li>
+<li>10GB 流量额度（覆盖日常学习与轻量部署需求）</li>
+<li>亚太节点（延迟低，适合国内用户访问）</li>
+</ul>
+<p>点击"亚太基础版"卡片上的<strong>"去领取"</strong>按钮，系统将弹出确认窗口。</p>
+
+<h2>五、填写申请理由</h2>
+<p>在弹出的申请窗口中，需要完成以下操作：</p>
+<ol>
+<li>勾选"我已阅读并同意《公益云服务协议》"复选框</li>
+<li>在理由输入框中填写使用目的（建议写真实合理的用途，如"学习Linux服务器运维"、"搭建个人博客测试环境"、"开发项目接口调试"等）</li>
+<li>点击<strong>"提交申请"</strong>按钮</li>
+</ol>
+<p>提交后系统通常会在几分钟内完成审核。审核通过后，公益云实例将自动创建并出现在你的控制台实例列表中。</p>
+
+<h2>六、领取后的操作建议（CDN 加速配置）</h2>
+<p>成功领取公益云后，建议配置 CDN 加速，步骤如下：</p>
+<ul>
+<li>进入实例详情页，点击"站点管理"</li>
+<li>点击"添加站点"</li>
+<li>在"加速域名"栏输入你要加速的域名</li>
+<li>源站类型选 IP，填入你的服务器 IP</li>
+<li>添加完成后点击"配置"，记录下 CNAME 地址（如 exnlbxzp.kyc.tgscdn.com）</li>
+<li>到你的域名提供商，添加解析记录</li>
+<li>主机记录填你的 CDN 前缀（如 example）</li>
+<li>记录类型选 CNAME</li>
+<li>记录值填站点配置的 CNAME 地址</li>
+</ul>
+<p>以 example.heyiwei999.xyz 为例：主机记录填 <code>example</code>，记录类型选 <code>CNAME</code>，记录值填 <code>exnlbxzp.kyc.tgscdn.com</code>。</p>
+
+<div class="note">
+<strong>温馨提示：</strong>公益云资源有限，请合理使用。到期后如需继续使用，可关注官方公告了解续期政策。流量用尽后可按需充值或等待下个周期重置。
+</div>
+
+<div class="warn">
+<strong>注意事项：</strong>请勿将公益云用于挖矿、代理转发、攻击测试等违规用途，否则账号将被封禁且无法申诉。推荐链接含邀请参数，通过该链接注册对双方均有积分奖励，但领取公益云本身不强制要求通过推荐链接注册。
+</div>
+
+<h2>七、常见问题</h2>
+<p><strong>Q：公益云和付费云服务器有什么区别？</strong><br>
+A：公益云在资源配置上有所限制（如流量上限30天），但核心功能与付费实例一致，适合学习与轻量应用。</p>
+<p><strong>Q：到期后数据会丢失吗？</strong><br>
+A：实例到期后系统会保留一段时间（通常为7天），请及时备份重要数据到本地。</p>
+<p><strong>Q：可以领取多个公益云实例吗？</strong><br>
+A：每个账号通常限领一个公益云实例，具体以控制台显示为准。</p>
+
+<p>以上即为公益云免费领取的完整流程说明。如有疑问可联系慈云数据官方客服获取帮助。</p>
+
+<div class="footer">
+<p>本页面由用户自行整理，仅供学习参考。链接含推荐参数，注册即视为同意慈云数据相关服务条款。</p>
+</div>
+
+</div>
+</body>
+</html>
